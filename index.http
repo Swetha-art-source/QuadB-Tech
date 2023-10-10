@@ -1,0 +1,29 @@
+###
+GET http://localhost:3000/details/143eabe7-9422-4def-8543-6054b3138efe
+
+###
+curl -X POST -H "Content-Type: application/json" -d '{
+    "user_details": {
+        "user_name": "string",
+        "user_email": "slvin1@example.com",
+        "user_password": "password123",
+        "user_image": "User-Profile-PNG-Image.png",
+        "total_orders": 2
+    }
+}' http://localhost:3000/insert
+
+###
+curl -X PUT -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYjA0Njg3MjAtZTMzMi00YjRiLWI0M2YtYzliOTYzNWUzNmExIiwiaWF0IjoxNjk2ODU3ODM0LCJleHAiOjE2OTY4NjE0MzR9.QYxwLYFa-QMubkJF3FgJAf1FnOaZL4sXRd5nMyO7tqo" -H "Content-Type: application/json" -d '{
+  "user_id": "143eabe7-9422-4def-8543-6054b3138efe",
+  "user_name": "NewName",
+  "user_email": "slvin1@example.com",
+  "user_password": "newpassword",
+  "total_orders": 43,
+  "user_image": "User-Profile-PNG-Image.png"
+}' http://localhost:3000/update
+
+###
+GET http://localhost:3000/image/143eabe7-9422-4def-8543-6054b3138efe
+
+###
+DELETE http://localhost:3000/delete/a891a2c2-5a12-459a-a2fb-6b30d2872921
